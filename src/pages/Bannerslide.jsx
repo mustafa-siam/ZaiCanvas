@@ -31,7 +31,7 @@ const Bannerslide = () => {
       >
         <SwiperSlide><img src="https://i.postimg.cc/nrZTDDwq/pexels-thomas-balabaud-735585-1579739.jpg"/></SwiperSlide>
         <SwiperSlide><img src="https://i.postimg.cc/66rBxxrP/s-l1200.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="https://i.postimg.cc/L5Z6gGdt/sketches.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="https://i.postimg.cc/RhM824B2/hp-toptile1-05082025-large.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://i.postimg.cc/C1MVsztp/pexels-andrew-2123337.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://i.postimg.cc/135BBXbW/pexels-tobiasbjorkli-2119706.jpg" alt="" /></SwiperSlide>
        

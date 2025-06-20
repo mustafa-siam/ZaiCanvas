@@ -7,7 +7,6 @@ const Mycrafts = () => {
     const [myartcrafts,setmyartcrafts]=useState(craftloader);
     return (
         <div>
-            hello {myartcrafts.length}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch'>
             {
                 myartcrafts.map(artcraft=><Mycraft key={artcraft._id} artcraft={artcraft} myartcrafts={myartcrafts} setmyartcrafts={setmyartcrafts}></Mycraft>)

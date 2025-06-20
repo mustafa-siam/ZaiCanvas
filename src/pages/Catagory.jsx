@@ -1,8 +1,9 @@
 
 import { BiDollar } from "react-icons/bi";
 import { IoStar } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const Catagory = ({catagory}) => {
-     const {itemname,subcategoryname,shortdescription,price,rating,stockstatus,photourl}=catagory;
+     const {_id,itemname,subcategoryname,shortdescription,price,rating,stockstatus,photourl}=catagory;
     return (
                     <div className="card bg-base-100 shadow-lg h-full hover:shadow-2xl">
           <figure className='h-[300px]'>
@@ -29,7 +30,7 @@ const Catagory = ({catagory}) => {
             
                 <p className='text-end text-xl font-bold'>{stockstatus}</p>
             <div className="card-actions justify-center ">
-              <button className="btn btn-primary w-full text-xl">View Details</button>
+              <button className="btn btn-primary w-full text-xl"><Link to={`/details/${_id}`}> View Details</Link></button>
             </div>
           </div>
         </div>
