@@ -1,8 +1,9 @@
 import React from 'react';
 import { BiDollar } from "react-icons/bi";
 import { IoStar } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 const Craftcard = ({craftitem}) => {
-    const {itemname,subcategoryname,shortdescription,price,rating,stockstatus,photourl}=craftitem;
+    const {_id,itemname,subcategoryname,shortdescription,price,rating,stockstatus,photourl}=craftitem;
     return (
         <div>
             <div className="card bg-base-100 shadow-lg h-full">
@@ -30,7 +31,7 @@ const Craftcard = ({craftitem}) => {
     
         <p className='text-end text-xl font-bold'>{stockstatus}</p>
     <div className="card-actions justify-center ">
-      <button className="btn btn-primary w-full text-xl">View Details</button>
+      <button className="btn btn-primary w-full text-xl"><Link to={`/details/${_id}`}> View Details</Link></button>
     </div>
   </div>
 </div>

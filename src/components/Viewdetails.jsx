@@ -39,6 +39,10 @@ const Viewdetails = () => {
                         <p className="text-[#ee2d67] text-xl font-bold">Price:</p>
                         <p>{price}</p>
                     </div>
+                    <div>
+                        <p className="text-[#ee2d67] text-xl font-bold">Rarity:</p>
+                        <p>One-of-a-kind Artwork</p>
+                    </div>
                      <div>
                     <p className="text-[#ee2d67] text-xl font-bold">Artist:</p>
                     <p>Mustafa siam</p>
