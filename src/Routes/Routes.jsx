@@ -9,6 +9,8 @@ import Mycrafts from "../components/Mycrafts";
 import Privateroute from "./Privateroute";
 import Updatecraft from "../components/Updatecraft";
 import Viewdetails from "../components/Viewdetails";
+import Userprofile from "../components/Userprofile";
+import Editprofile from "../components/Editprofile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
     path:'/details/:id',
     element:<Viewdetails></Viewdetails>,
     loader:({params})=>fetch(`http://localhost:5000/craftitems/${params.id}`)
+  },
+  {
+    path:'/userprofile',
+    element:<Userprofile></Userprofile>,
+  },
+  {
+    path:'/editprofile',
+    element:<Editprofile></Editprofile>
   }
   ]
   },

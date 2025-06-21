@@ -44,7 +44,12 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     {
-      user?(<div><button className='btn' onClick={handlelogout}>Log Out</button></div>):(<div><button className='btn'><Link to={'/login'}>Log In</Link></button></div>)
+      user?(<div className="navbar-end">
+        <Link to={`/userprofile`}>
+        <img className=" mr-5 border-2 border-b-gray-950 md:w-12 w-16 h-12 rounded-[45%]" src={user.photoURL} alt="" />
+        </Link>
+        <button className='btn' onClick={handlelogout}>Log Out</button>
+        </div>):(<div className="navbar-end"><img className=" pr-5" src="/src/assets/user.png" alt="" /><button className='btn'><Link to={'/login'}>Log In</Link></button></div>)
     }
   </div>
 </div>
