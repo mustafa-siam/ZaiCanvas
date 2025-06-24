@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut ,GoogleAuthProvider,signInWithPopup,GithubAuthProvider } from 'firebase/auth';
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signOut ,GoogleAuthProvider,signInWithPopup,GithubAuthProvider,updateProfile} from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import auth from '../firebase/firebase.init';
 export const authcontext=createContext()
@@ -20,6 +20,15 @@ const Authprovider = ({children}) => {
         setloader(true)
         return signOut(auth);
     }
+    const updateuserprofile = (name, photourl) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photourl,
+    })
+    .then(() => {
+    setuser({ ...auth.currentUser });
+  });
+  };
     useEffect(()=>{
         const unsubscribe=onAuthStateChanged(auth,currentuser=>{
             setuser(currentuser);
@@ -43,6 +52,7 @@ const Authprovider = ({children}) => {
         signout,
         loginwithgoogle,
         loginwithgithub,
+        updateuserprofile,
         user,
         loader
     }

@@ -2,15 +2,14 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authcontext } from "../Routes/Authprovider";
 import Swal from 'sweetalert2';
-import { updateProfile } from "firebase/auth";
-
-
+import axios from "axios";
 const Register = () => {
     const [passerror, setpasserror] = useState('');
-    const { creatuser } = useContext(authcontext);
+    const { creatuser,updateuserprofile} = useContext(authcontext);
+
     const navigate = useNavigate();
 
-    const handleregister = (e) => {
+    const handleregister =async(e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -30,51 +29,35 @@ const Register = () => {
 
         setpasserror('')
         console.log(registeruser)
+       try {
+      await creatuser(email, password);
+      await updateuserprofile(name, photourl);
+      const response = await axios.post(
+        "http://localhost:5000/craftuser",
+        registeruser
+      );
 
-        // First update the profile immediately after user creation
-        creatuser(email, password)
-        .then(result => {
-            console.log(result.user)
-            
-            // Update profile before making the API call
-            return updateProfile(result.user, {
-                displayName: name,
-                photoURL: photourl
-            }).then(() => {
-                // Then make the API call
-                return fetch("http://localhost:5000/craftuser", {
-                    method: "POST",
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify({ name, photourl, email, password })
-                });
-            });
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            Swal.fire({
-                title: "Registration Successfull",
-                icon: "success",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            e.target.reset();
-            setTimeout(() => navigate('/'), 3000);
-        })
-        .catch(error => {
-            console.error(error);
-            Swal.fire({
-                title: "Registration Failed",
-                text: error.message,
-                icon: "error",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-        })
+      if (response.data.insertedId) {
+        Swal.fire({
+          title: "Registration Successful",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        form.reset();
+        setTimeout(() => navigate("/"), 2000);
+      }
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        title: "Registration Failed",
+        text: error.message,
+        icon: "error",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
-
+};
     return (
         <div>
             <div className="h-screen flex items-center flex-col justify-center">

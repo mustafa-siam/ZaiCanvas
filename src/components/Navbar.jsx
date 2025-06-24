@@ -42,16 +42,28 @@ const Navbar = () => {
      {navlinks}
     </ul>
   </div>
-  <div className="navbar-end">
-    {
-      user?(<div className="navbar-end">
-        <Link to={`/userprofile`}>
-        <img className=" mr-5 border-2 border-b-gray-950 md:w-12 w-16 h-12 rounded-[45%]" src={user.photoURL} alt="" />
+  <div className="navbar-end flex items-center gap-4">
+    {user ? (
+      <>
+        <Link to="/userprofile">
+          <img
+            className="w-12 h-12 rounded-[45%] border-2 border-b-gray-950"
+            src={user.photoURL}
+            alt="User"
+            title={user.displayName}
+          />
         </Link>
-        <button className='btn' onClick={handlelogout}>Log Out</button>
-        </div>):(<div className="navbar-end"><img className=" pr-5" src="/src/assets/user.png" alt="" /><button className='btn'><Link to={'/login'}>Log In</Link></button></div>)
-    }
-  </div>
+        <button className="btn" onClick={handlelogout}>Log Out</button>
+      </>
+    ) : (
+      <>
+        <img className="w-10 h-10" src="/src/assets/user.png" alt="Default User" />
+        <Link to="/login">
+          <button className="btn">Log In</button>
+        </Link>
+      </>
+    )}
+</div>
 </div>
     );
 };
