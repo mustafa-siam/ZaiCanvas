@@ -11,6 +11,7 @@ import Updatecraft from "../components/Updatecraft";
 import Viewdetails from "../components/Viewdetails";
 import Userprofile from "../components/Userprofile";
 import Editprofile from "../components/Editprofile";
+import Subcatagoryitems from "../pages/Subcatagoryitems";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,7 +59,12 @@ const router = createBrowserRouter([
   {
     path:'/editprofile',
     element:<Editprofile></Editprofile>
-  }
+  },
+  {
+  path: '/subcategory/:catagoryname',
+  element:<Subcatagoryitems></Subcatagoryitems>,
+  loader: ({ params }) => fetch(`http://localhost:5000/subcategory/${params.catagoryname}`),
+}
   ]
   },
 ]);
