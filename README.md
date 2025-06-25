@@ -17,6 +17,6 @@
 - Firebase Authentication + Hosting
 - MongoDB (via Express.js for backend)
 - Tailwind CSS + DaisyUI
-- swipper & Sweet Alert for user feedback
+- swipper,react typewritter,react tooltip,Sweet Alert for user feedback
 
 ---

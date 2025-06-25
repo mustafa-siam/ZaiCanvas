@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authcontext } from '../Routes/Authprovider';
 import Swal from 'sweetalert2'
-
+import { Tooltip as ReactTooltip } from "react-tooltip";
 const Navbar = () => {
   const {user,signout}=useContext(authcontext)
   const navlinks=<>
@@ -51,9 +51,14 @@ const Navbar = () => {
             className="w-12 h-12 rounded-[45%] border-2 border-b-gray-950"
             src={user.photoURL}
             alt="User"
-            title={user.displayName}
+            data-tooltip-id="my-tooltip-1"
           />
         </Link>
+        <ReactTooltip
+        id="my-tooltip-1"
+        place="bottom"
+        content={user.displayName}
+      />
         <button className="btn" onClick={handlelogout}>Log Out</button>
       </>
     ) : (
