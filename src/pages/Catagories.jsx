@@ -9,7 +9,7 @@ const Catagories = () => {
         .then(data=>setcraftcatagories(data));
     },[])
     return (
-        <div>
+        <div className='px-2'>
             <h1 className='text-4xl font-bold pb-8'>Our Most Popular Catagory</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch'>
                 {

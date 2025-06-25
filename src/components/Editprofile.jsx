@@ -1,21 +1,18 @@
 import React, { useContext } from 'react';
 import { authcontext } from '../Routes/Authprovider';
 import { useNavigate } from 'react-router-dom';
-import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
 const Editprofile = () => {
-   const {user}=useContext(authcontext)
+   const {user,updateuserprofile}=useContext(authcontext)
     const navigate=useNavigate();
     const handleupdateProfile=(e)=>{
         e.preventDefault();
         const form=e.target;
         const name=form.name.value;
         const photourl=form.photourl.value;
-        updateProfile(user,{
-            displayName:name,
-            photoURL:photourl,
-        })
-         Swal.fire({
+        updateuserprofile(name,photourl)
+        .then(() => {
+                       Swal.fire({
                         title: "Profile updated successfully",
                         icon: "success",
                         showConfirmButton: false,
@@ -23,6 +20,8 @@ const Editprofile = () => {
                     });
                     e.target.reset();
         setTimeout(() =>navigate('/userprofile'), 2000);
+})
+        
     }
     return (
         <div>

@@ -27,7 +27,7 @@ const Bannerslide = () => {
         }}
         navigation={true}
         modules={[Autoplay,Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper h-[40vh] md:h-[75vh]"
       >
         <SwiperSlide><img src="https://i.postimg.cc/nrZTDDwq/pexels-thomas-balabaud-735585-1579739.jpg"/></SwiperSlide>
         <SwiperSlide><img src="https://i.postimg.cc/66rBxxrP/s-l1200.jpg" alt="" /></SwiperSlide>
