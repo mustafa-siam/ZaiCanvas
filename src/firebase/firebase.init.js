@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA5mft2IhQfa4iDqj44DZlyLiDN9FGpeto",
-  authDomain: "zaicanvas.firebaseapp.com",
-  projectId: "zaicanvas",
-  storageBucket: "zaicanvas.firebasestorage.app",
-  messagingSenderId: "288775508034",
-  appId: "1:288775508034:web:68a1167f5e207b1f399ddb"
+apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
