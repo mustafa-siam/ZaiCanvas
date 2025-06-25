@@ -1,6 +1,6 @@
 # ZaiCanvas 
 
-**Live Site URL:** [https://zai-canvas.web.app](https://zai-canvas.web.app)  
+**Live Site URL:** [ https://zaicanvas.web.app]( https://zaicanvas.web.app)  
 **Selected Category:** Painting and Drawing
 
 ##  Website Features

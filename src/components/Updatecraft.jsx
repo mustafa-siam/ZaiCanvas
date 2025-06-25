@@ -20,7 +20,7 @@ const stockstatus=form.stockstatus.value;
 const photourl=form.photourl.value;
 const craftitem={itemname,subcategoryname,shortdescription,price,rating,customization,processingtime,stockstatus,photourl}
 console.log(craftitem)
-fetch(`http://localhost:5000/craftitems/${_id}`,{
+fetch(`zaicanvas-server.vercel.app/craftitems/${_id}`,{
   method:'PUT',
   headers:{
     'content-type':'application/json',

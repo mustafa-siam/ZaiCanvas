@@ -16,7 +16,7 @@ const Mycraft = ({artcraft,myartcrafts,setmyartcrafts}) => {
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
   if (result.isConfirmed) {
-     fetch(`http://localhost:5000/craftitems/${id}`,{
+     fetch(`zaicanvas-server.vercel.app/craftitems/${id}`,{
         method:'DELETE',
     })
     .then(res=>res.json())

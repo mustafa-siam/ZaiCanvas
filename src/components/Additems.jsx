@@ -22,7 +22,7 @@ const Additems = () => {
         const photourl=form.photourl.value;
         const craftitem={itemname,subcategoryname,shortdescription,price,rating,customization,processingtime,stockstatus,email,username,photourl}
 console.log(craftitem)
-fetch('http://localhost:5000/craftitems',{
+fetch('zaicanvas-server.vercel.app/craftitems',{
   method:"POST",
   headers:{
     "content-type":"application/json",

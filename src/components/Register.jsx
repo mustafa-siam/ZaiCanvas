@@ -33,7 +33,7 @@ const Register = () => {
       await creatuser(email, password);
       await updateuserprofile(name, photourl);
       const response = await axios.post(
-        "http://localhost:5000/craftuser",
+        "zaicanvas-server.vercel.app/craftuser",
         registeruser
       );
 
