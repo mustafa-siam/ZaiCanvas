@@ -1,12 +1,22 @@
-# React + Vite
+# ZaiCanvas 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [https://zai-canvas.web.app](https://zai-canvas.web.app)  
+**Selected Category:** Painting and Drawing
 
-Currently, two official plugins are available:
+##  Website Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Showcases various painting and drawing items across subcategories like Landscape, Portrait, Watercolor, Oil, Charcoal, and Cartoon art.
+-  Includes protected routes for adding and managing your own craft items with login authentication.
+- Dynamic "All Art & Craft Items" and "My Art & Craft List" pages with detailed view, update, and delete functionalities.
+-  Supports filtering items based on customization options (Yes/No).
+-  Light/Dark theme toggle with smooth UI and responsive design for mobile, tablet, and desktop.
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + React Router
+- Firebase Authentication + Hosting
+- MongoDB (via Express.js for backend)
+- Tailwind CSS + DaisyUI
+- swipper & Sweet Alert for user feedback
+
+---
