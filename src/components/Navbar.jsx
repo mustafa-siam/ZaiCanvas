@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { authcontext } from '../Routes/Authprovider';
 import Swal from 'sweetalert2'
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { Slide } from "react-awesome-reveal";
 const Navbar = () => {
   const {user,signout}=useContext(authcontext)
   const navlinks=<>
@@ -36,7 +37,9 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <Link to={'/'} className="btn btn-ghost text-xl">ZaiCanvas</Link>
+    <Slide>
+        <Link to={'/'} className="btn btn-ghost text-xl">ZaiCanvas</Link>
+      </Slide>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
