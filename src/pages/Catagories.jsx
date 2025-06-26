@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const Catagories = () => {
     const [craftcatagories,setcraftcatagories]=useState([]);
     useEffect(()=>{
-        fetch('zaicanvas-server.vercel.app/craftcatagory')
+        fetch('https://zaicanvas-server.vercel.app/craftcatagory')
         .then(res=>res.json())
         .then(data=>setcraftcatagories(data));
     },[])

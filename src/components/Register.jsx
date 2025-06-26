@@ -33,7 +33,7 @@ const Register = () => {
       await creatuser(email, password);
       await updateuserprofile(name, photourl);
       const response = await axios.post(
-        "zaicanvas-server.vercel.app/craftuser",
+        "https://zaicanvas-server.vercel.app/craftuser",
         registeruser
       );
 
@@ -45,7 +45,7 @@ const Register = () => {
           timer: 1500,
         });
         form.reset();
-        setTimeout(() => navigate("/"), 2000);
+        setTimeout(() => navigate("/"), 1500);
       }
     } catch (error) {
       console.error(error);

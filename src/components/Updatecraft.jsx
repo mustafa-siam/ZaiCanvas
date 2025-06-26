@@ -20,7 +20,7 @@ const stockstatus=form.stockstatus.value;
 const photourl=form.photourl.value;
 const craftitem={itemname,subcategoryname,shortdescription,price,rating,customization,processingtime,stockstatus,photourl}
 console.log(craftitem)
-fetch(`zaicanvas-server.vercel.app/craftitems/${_id}`,{
+fetch(`https://zaicanvas-server.vercel.app/craftitems/${_id}`,{
   method:'PUT',
   headers:{
     'content-type':'application/json',
@@ -49,12 +49,12 @@ Swal.fire({
                 <div className='md:flex gap-9 pb-8'>
 <fieldset className="fieldset w-1/2">
   <legend className="fieldset-legend text-base">Item Name:</legend>
-  <input type="text" name="itemname" className="input w-full" placeholder="item name" defaultValue={itemname} />
+  <input type="text" name="itemname" className="input w-full" placeholder="item name" defaultValue={itemname} required/>
   
 </fieldset>
 <fieldset className="fieldset w-1/2">
   <legend className="fieldset-legend text-base">subcategory_Name:</legend>
-  <input type="text" name="subcategoryname" className="input w-full" placeholder="subcategory name" defaultValue={subcategoryname}/>
+  <input type="text" name="subcategoryname" className="input w-full" placeholder="subcategory name" defaultValue={subcategoryname} required/>
 </fieldset>
                 </div>
                 <div className='md:flex gap-9 pb-8'>
@@ -65,7 +65,7 @@ Swal.fire({
 </fieldset>
 <fieldset className="fieldset w-1/2">
   <legend className="fieldset-legend text-base">price:</legend>
-  <input type="text" name="price" className="input w-full" placeholder="price" defaultValue={price} />
+  <input type="text" name="price" className="input w-full" placeholder="price" defaultValue={price} required/>
 </fieldset>
                 </div>
                 <div className='md:flex gap-9 pb-8'>
@@ -76,7 +76,7 @@ Swal.fire({
 </fieldset>
 <fieldset className="fieldset w-1/2">
   <legend className="fieldset-legend text-base">customization:</legend>
-  <input type="text" name="customization" className="input w-full" placeholder="Yes/No" defaultValue={customization}/>
+  <input type="text" name="customization" className="input w-full" placeholder="Yes/No" defaultValue={customization} required/>
 </fieldset>
                 </div>
                 <div className='md:flex gap-9 pb-8'>
@@ -93,7 +93,7 @@ Swal.fire({
                 <div className='md:flex gap-9 pb-8'>
 <fieldset className="fieldset w-full">
   <legend className="fieldset-legend text-base">Photo Url:</legend>
-  <input type="text" name="photourl" className="input w-full" placeholder="Add photo url" defaultValue={photourl}/>
+  <input type="text" name="photourl" className="input w-full" placeholder="Add photo url" defaultValue={photourl} required/>
 </fieldset>
                 </div>
                 

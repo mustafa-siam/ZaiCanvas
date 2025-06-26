@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path:"/allitems",
     element:<Allitems></Allitems>,
-    loader:()=>fetch('zaicanvas-server.vercel.app/craftitems')
+    loader:()=>fetch('https://zaicanvas-server.vercel.app/craftitems')
   },
   {
     path:'/register',
@@ -40,17 +40,17 @@ const router = createBrowserRouter([
   {
     path:'/mycraft/:email',
     element:<Privateroute><Mycrafts></Mycrafts></Privateroute>,
-    loader:({params})=>fetch(`zaicanvas-server.vercel.app/mycraft/${params.email}`)
+    loader:({params})=>fetch(`https://zaicanvas-server.vercel.app/mycraft/${params.email}`)
   },
   {
     path:'/updatecraft/:id',
     element:<Updatecraft></Updatecraft>,
-    loader:({params})=>fetch(`zaicanvas-server.vercel.app/craftitems/${params.id}`)
+    loader:({params})=>fetch(`https://zaicanvas-server.vercel.app/craftitems/${params.id}`)
   },
   {
     path:'/details/:id',
     element:<Viewdetails></Viewdetails>,
-    loader:({params})=>fetch(`zaicanvas-server.vercel.app/craftitems/${params.id}`)
+    loader:({params})=>fetch(`https://zaicanvas-server.vercel.app/craftitems/${params.id}`)
   },
   {
     path:'/userprofile',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
   {
   path: '/subcategory/:catagoryname',
   element:<Subcatagoryitems></Subcatagoryitems>,
-  loader: ({ params }) => fetch(`zaicanvas-server.vercel.app/subcategory/${params.catagoryname}`),
+  loader: ({ params }) => fetch(`https://zaicanvas-server.vercel.app/subcategory/${params.catagoryname}`),
 }
   ]
   },

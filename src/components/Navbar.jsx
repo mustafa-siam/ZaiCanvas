@@ -38,7 +38,10 @@ const Navbar = () => {
       </ul>
     </div>
     <Slide>
-        <Link to={'/'} className="btn btn-ghost text-xl">ZaiCanvas</Link>
+        <Link to="/" className="btn btn-ghost text-xl inline gap-1">
+  <span className="text-[#ee2d67]">Zai</span><span>Canvas</span>
+</Link>
+
       </Slide>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -66,7 +69,7 @@ const Navbar = () => {
       </>
     ) : (
       <>
-        <img className="w-10 h-10" src="/src/assets/user.png" alt="Default User" />
+        <img className="w-10 h-10" src="https://i.postimg.cc/4Nz5d0G8/user.png" alt="Default User" />
         <Link to="/login">
           <button className="btn">Log In</button>
         </Link>

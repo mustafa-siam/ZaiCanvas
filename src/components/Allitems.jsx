@@ -15,7 +15,7 @@ const Allitems = () => {
        }
     }
     return (
-        <div>
+        <div className='px-2'> 
           <div className="dropdown my-5 flex justify-end">
   <div tabIndex={0} role="button" className="btn m-1">Filter for craft customization</div>
   <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
