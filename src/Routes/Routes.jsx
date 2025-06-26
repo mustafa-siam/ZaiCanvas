@@ -12,10 +12,12 @@ import Viewdetails from "../components/Viewdetails";
 import Userprofile from "../components/Userprofile";
 import Editprofile from "../components/Editprofile";
 import Subcatagoryitems from "../pages/Subcatagoryitems";
+import Errorpage from "../pages/Errorpage";
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<Errorpage></Errorpage>,
     children:[{
       path:'/',
       element:<Home></Home>
