@@ -79,7 +79,7 @@ const Additems = () => {
               name="itemname"
               className="input input-bordered w-full"
               placeholder="Item name"
-              required
+            
             />
           </fieldset>
 
@@ -101,7 +101,7 @@ const Additems = () => {
               name="shortdescription"
               className="input input-bordered w-full"
               placeholder="Short description"
-              required
+              
             />
           </fieldset>
 
@@ -112,7 +112,7 @@ const Additems = () => {
               name="price"
               className="input input-bordered w-full"
               placeholder="Price"
-              required
+            
             />
           </fieldset>
 
@@ -123,7 +123,7 @@ const Additems = () => {
               name="rating"
               className="input input-bordered w-full"
               placeholder="Rating"
-              required
+          
             />
           </fieldset>
 
@@ -134,7 +134,7 @@ const Additems = () => {
               name="customization"
               className="input input-bordered w-full"
               placeholder="Yes / No"
-              required
+              
             />
           </fieldset>
 
@@ -145,7 +145,7 @@ const Additems = () => {
               name="processingtime"
               className="input input-bordered w-full"
               placeholder="Processing time"
-              required
+            
             />
           </fieldset>
 
@@ -156,7 +156,7 @@ const Additems = () => {
               name="stockstatus"
               className="input input-bordered w-full"
               placeholder="In stock / Made to order"
-              required
+              
             />
           </fieldset>
 
